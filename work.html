@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+	<div class="modal" id="myModal">
+		<div class="modal-container">
+		  <span class="close" id="closeModal">&times;</span> <!-- Add this line -->
+		  <h1>Hi</h1>
+		  <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+		  <span>Lorem, ipsum dolor.</span>
+
+		</div>
+	 </div>
+	 
+	<header>
+		<div class="head">
+			<div class="container">
+				<div class="con-ins">
+					<div class="title">
+						AmanX
+					</div>
+					<nav id="navbar">
+						<ul id="nav">
+							<li><a href="./index.html">Home</a></li>
+							<li><a href="./about.html">About</a></li>
+							<li><a class="active" href="/">Works</a></li>
+							<li><a href="./contact.html">Contact</	a></li>
+						</ul>
+						<i id="bar" class="fa-solid fa-bars"></i>
+					</nav>
+					<div class="head-button">
+						<button id="modelWindow">Let's talk</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="works">
+		<div class="container">
+			<div class="word-con">
+				<div class="word-ma">
+					<div data-aos="zoom-in-up" data-aos-duration="2000" class="word-m">
+						<img src="https://wpriverthemes.com/gridx/wp-content/uploads/2023/04/project1.jpeg" alt="">
+						<div class="word-inf">
+							<div class="word-info">
+								<p>Vue.js project</p>
+								<h1>MoneyBall</h1>
+							</div>
+							<i class="fa-solid fa-circle-arrow-right"></i>	
+						</div>
+					</div>
+					<div data-aos="zoom-in-up" data-aos-duration="2000" class="word-m">
+						<img class="asdf" src="https://wpriverthemes.com/gridx/wp-content/uploads/2023/04/project2.jpeg" alt="">
+						<div class="word-inf">
+							<div class="word-info">
+								<p>Nuxt project</p>
+								<h1>451</h1>
+							</div>
+							<i class="fa-solid fa-circle-arrow-right"></i>	
+						</div>
+					</div>
+				</div>
+				<div class="word-man">
+					<div data-aos="zoom-in-up" data-aos-duration="2000" class="sec-title">
+						<img src="https://wpriverthemes.com/gridx/wp-content/themes/gridx/assets/images/star-2.png" alt="">
+						<h1>all-projects</h1>
+						<img src="https://wpriverthemes.com/gridx/wp-content/themes/gridx/assets/images/star-2.png" alt="">
+					</div>
+					<div class="boxes-word">
+						<div data-aos="zoom-in-up" data-aos-duration="2000" class="word-m">
+							<img src="https://wpriverthemes.com/gridx/wp-content/uploads/2023/04/project3.jpeg" alt="">
+							<div class="word-inf">
+								<div class="word-info">
+									<p>vue.js proejct</p>
+									<h1>Quiz</h1>
+								</div>	
+									<i class="fa-solid fa-circle-arrow-right"></i>				  
+							</div>
+						</div>
+						<div data-aos="zoom-in-up" data-aos-duration="2000" class="word-m">
+							<img src="https://wpriverthemes.com/gridx/wp-content/uploads/2023/04/project2.jpeg" alt="">
+							<div class="word-inf">
+								<div class="word-info">
+									<p>vue.js project</p>
+									<h1>Message</h1>
+								</div>
+								<i class="fa-solid fa-circle-arrow-right"></i>	
+							</div>
+						</div>
+						<div data-aos="zoom-in-up" data-aos-duration="2000" class="word-m">
+							<img src="https://wpriverthemes.com/gridx/wp-content/uploads/2023/04/project5.jpeg" alt="">
+							<div class="word-inf">
+								<div class="word-info">
+									<p>nuxt project</p>
+									<h1>scratch</h1>
+								</div>
+								<i class="fa-solid fa-circle-arrow-right"></i>	
+							</div>
+						</div>
+						<div data-aos="zoom-in-up" data-aos-duration="2000" class="word-m">
+						<img src="https://wpriverthemes.com/gridx/wp-content/uploads/2023/04/project6.jpeg" alt="">
+						<div class="word-inf">
+							<div class="word-info">
+								<p>web designing</p>
+								<h1>Dynamic</h1>
+							</div>
+							<i class="fa-solid fa-circle-arrow-right"></i>	
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+	const modal = document.getElementById('myModal');
+const open = document.getElementById('modelWindow');
+const close = document.getElementById('closeModal')
+
+open.addEventListener("click", (event) => {
+    event.preventDefault();
+    modal.style.display = "flex";
+});
+
+close.addEventListener("click", (event) => {
+    modal.style.display = "none";
+});
+
+</script>
+</html>

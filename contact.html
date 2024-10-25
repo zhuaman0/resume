@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+	<header>
+		<div class="head">
+			<div class="container">
+				<div class="con-ins">
+					<div class="title">
+						AmanX
+					</div>
+					<nav id="navbar">
+						<ul id="nav">
+							<li><a href="./index.html">Home</a></li>
+							<li><a href="./about.html">About</a></li>
+							<li><a href="./work.html">Works</a></li>
+							<li><a class="active" href="./contact.html">Contact</a></li>
+							<i id="close" class="fa-solid fa-xmark"></i>
+						</ul>
+						<i id="bar" class="fa-solid fa-bars"></i>
+					</nav>
+					<div class="head-button">
+						<button>Contact me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="contact">
+		<div class="container">
+			<div data-aos="zoom-in-up" data-aos-duration="2000" class="contact-con">
+				<div class="contact-first">
+					<h1 class="con">contact info</h1>
+					<div class="connectme">
+						<div class="mail">
+							<div class="main-icon">
+								<i class="fa-regular fa-envelope"></i>
+							</div>
+							<div class="mail-info">
+								<h1>mail us</h1>
+								<p>amaaitp@gmail.com</p>
+								<p>aman-zhumagali@mail.ru</p>
+							</div>
+						</div>
+						<div class="mail">
+							<div class="main-icon">
+								<i class="fa-solid fa-phone"></i>
+							</div>
+							<div class="mail-info">
+								<h1>call me</h1>
+								<p>8 705 728 7996</p>
+								<p>8 705 967 3404</p>
+							</div>
+						</div>
+						<div class="mail">
+							<div class="main-icon">
+								<i class="fa-solid fa-location-dot"></i>	
+							</div>
+							<div class="mail-info">
+								<h1>location</h1>
+								<p>Burnoe, Konaev 30</p>
+								<p>Taraz, Pushkina 154</p>
+							</div>
+						</div>
+					</div>
+					<div class="types">
+						<h1>social info</h1>
+						<div class="types-icons">
+							<a href="https://www.linkedin.com/in/aman-zhumagali-29a73b306/"><i class="fa-brands fa-linkedin-in"></i></a>
+							<a href="https://www.instagram.com/amaaitp/"><i class="fa-brands fa-instagram"></i></a>
+							<a href="amaaitp@gmail.com"><i class="fa-solid fa-phone"></i></a>
+						</div>
+					</div>
+				</div>
+				<section class="contact" id="contact">
+					<div class="center">
+						<div class="h-main">
+							<div class="contact-form">
+								<form id="contactForm" novalidate data-aos="zoom-in-up" data-aos-duration="2000" action="">
+									<input id="name" type="text" placeholder="Your name">
+									<input id="email" type="text" placeholder="Email address..">
+									<input id="emailConfirm" type="text" placeholder="Confirm email address..">
+									<textarea id="message" cols="30" rows="10" placeholder="Write a message here..."></textarea>
+									<input type="submit" name="" value="Send Message" class="send-btn">
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	<script>
+		document.getElementById("contactForm").addEventListener("submit", function(event) {
+			const name = document.getElementById("name").value.trim();
+			const email = document.getElementById("email").value.trim();
+			const emailConfirm = document.getElementById("emailConfirm").value.trim();
+			const message = document.getElementById("message").value.trim();
+		
+			if (name === "") {
+				alert("Введите ваше имя.");
+				event.preventDefault();
+				return;
+			}
+			if (email === "" || emailConfirm === "") {
+				alert("Введите и подтвердите ваш email.");
+				event.preventDefault();
+				return;
+			}
+			if (message === "") {
+				alert("Введите сообщение.");
+				event.preventDefault();
+				return;
+			}
+			if (email !== emailConfirm) {
+				alert("Email адреса не совпадают.");
+				event.preventDefault();
+				return;
+			}
+			const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+			if (!emailPattern.test(email)) {
+				alert("Введите корректный email адрес.");
+				event.preventDefault();
+				return;
+			}
+			alert("Форма отправлена!");
+		});
+
+		const bar = document.getElementById('bar');
+		const nav = document.getElementById('navbar');
+		const close = document.getElementById('close')
+
+		bar.addEventListener("click", () => {
+			nav.classList.toggle('active');
+		});
+		close.addEventListener("click", () => {
+			nav.classList.remove('active');
+		})
+	</script>
+</body>
+</html>
