@@ -702,7 +702,6 @@ form .send-btn:hover {
 	align-items: center;
 	transition: top 0.3s ease-in-out;
 }
-
 #navbar ul li {
 	padding: 10px 0;
 }
@@ -822,3 +821,35 @@ form .send-btn:hover {
  .telega-box a {
 	color: white;
  }
+
+ .create-info i {
+	transition: transform 0.3s ease;
+ }
+.create-info i:hover {
+	transform: scale(1.1) translateX(10px); 
+}
+
+.iconns i {
+	transition: transform 0.3s ease;
+}
+
+.iconns i:hover {
+	transform: scale(1.1) translateX(10px); /* Scales and moves to the right */
+}
+
+
+.word-inf i {
+	transition: transform 0.3s ease;
+}
+.word-inf i:hover {
+	transform: scale(1.1) translateX(10px); 
+}
+.types-icons i {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.types-icons i:hover {
+	transform: scale(1.1); 
+	box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6), 
+					0px 4px 10px rgba(200, 200, 200, 0.4); /* White and light shadow */
+}

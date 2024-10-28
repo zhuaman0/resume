@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Contact Us</title>
 	<link rel="stylesheet" href="./style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +31,6 @@
 						</ul>
 						<i id="bar" class="fa-solid fa-bars"></i>
 					</nav>
-					<div class="head-button">
-						<button>Contact me</button>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -80,7 +77,7 @@
 						<div class="types-icons">
 							<a href="https://www.linkedin.com/in/aman-zhumagali-29a73b306/"><i class="fa-brands fa-linkedin-in"></i></a>
 							<a href="https://www.instagram.com/amaaitp/"><i class="fa-brands fa-instagram"></i></a>
-							<a href="amaaitp@gmail.com"><i class="fa-solid fa-phone"></i></a>
+							<a href="mailto:amaaitp@gmail.com"><i class="fa-solid fa-envelope"></i></a>
 						</div>
 					</div>
 				</div>
@@ -88,12 +85,13 @@
 					<div class="center">
 						<div class="h-main">
 							<div class="contact-form">
-								<form id="contactForm" novalidate data-aos="zoom-in-up" data-aos-duration="2000" action="">
-									<input id="name" type="text" placeholder="Your name">
-									<input id="email" type="text" placeholder="Email address..">
-									<input id="emailConfirm" type="text" placeholder="Confirm email address..">
-									<textarea id="message" cols="30" rows="10" placeholder="Write a message here..."></textarea>
-									<input type="submit" name="" value="Send Message" class="send-btn">
+								<form id="contactForm" novalidate data-aos="zoom-in-up" data-aos-duration="2000" action="https://api.web3forms.com/submit" method="POST">
+									<input type="hidden" name="access_key" value="61c468e8-7780-4813-a691-5efab6852ebd">
+									<input id="name" name="name" type="text" placeholder="Your name" required>
+									<input id="email" name="email" type="email" placeholder="Email address.." required>
+									<input id="emailConfirm" type="email" placeholder="Confirm email address.." required>
+									<textarea id="message" name="message" cols="30" rows="10" placeholder="Write a message here..." required></textarea>
+									<input type="submit" value="Send Message" class="send-btn">
 								</form>
 							</div>
 						</div>
@@ -152,7 +150,7 @@
 		});
 		close.addEventListener("click", () => {
 			nav.classList.remove('active');
-		})
+		});
 	</script>
 </body>
 </html>
