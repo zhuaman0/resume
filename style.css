@@ -403,12 +403,6 @@ span {
 	font-size: 12px;
 	text-transform: uppercase;
 }
-
-.word-m img {
-	width: 320px;
-	height: 320px;
-}
-
 .sec-title {
 	display: flex;
 	justify-content: center;
@@ -485,9 +479,8 @@ form {
 
 .contact-form {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	margin-top: 4.3rem;
+	margin-top: 2.1rem;
 }
 
 .contact-form form {
@@ -542,9 +535,6 @@ form .send-btn:hover {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	gap: 3rem;
-	margin-bottom: 20px;
-
 }
 
 .h-text h2 {
@@ -563,13 +553,11 @@ form .send-btn:hover {
 
 .h-button i {
 	margin-left: 6px;
-
 }
 
 .h-button a:hover {
 	transform: translateY(-5px);
 	color: var(--main-color);
-
 }
 
 :root {
