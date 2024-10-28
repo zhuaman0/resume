@@ -581,7 +581,6 @@ form .send-btn:hover {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-
 	.word-con {
 		display: flex;
 		flex-wrap: wrap;
@@ -698,6 +697,15 @@ form .send-btn:hover {
 #navbar.active ul {
 	top: 0;
 }
+nav ul li a.active {
+	color: #000000;
+}
+.main-grids {
+	gap: 0;
+}
+.main-project-cretate {
+	margin: 0 0;
+}
 #close {
 	position: absolute;
 	top: 30px;
@@ -705,7 +713,6 @@ form .send-btn:hover {
 	font-size: 30px;
 }
 	#bar {
-		display: flex;
 		color: white;
 		font-size: 30px;
 	}
@@ -768,7 +775,7 @@ form .send-btn:hover {
 @media (max-width: 480px) {
 	.container {
 		max-width: 300px;
-	}
+	}	
 }
 
 .modal {

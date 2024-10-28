@@ -13,18 +13,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
-	<div class="modal" id="myModal">
-		<div class="modal-container">
-		  <span class="close" id="closeModal">&times;</span> <!-- Add this line -->
-		  <h1>Hi</h1>
-		  <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-		  <span>Lorem, ipsum dolor.</span>
-
-		</div>
-	 </div>
-	 
-	<header>
+<body>	 
+	 <header>
 		<div class="head">
 			<div class="container">
 				<div class="con-ins">
@@ -33,14 +23,16 @@
 					</div>
 					<nav id="navbar">
 						<ul id="nav">
-							<li><a href="./index.html">Home</a></li>
+							<li><a href="#">Home</a></li>
 							<li><a href="./about.html">About</a></li>
-							<li><a class="active" href="/">Works</a></li>
-							<li><a href="./contact.html">Contact</	a></li>
+							<li><a  class="active" href="./work.html">Works</a></li>
+							<li><a href="./contact.html">Contact</a></li>
+							<i id="close" class="fa-solid fa-xmark"></i>
 						</ul>
+						<i id="bar" class="fa-solid fa-bars"></i>
 					</nav>
 					<div class="head-button">
-						<a href="contact.html"><button>Contact me</button></a>
+						<a href="contact.html">	<button>Contact me</button></a>
 					</div>
 				</div>
 			</div>
@@ -129,18 +121,15 @@
   AOS.init();
 </script>
 <script>
-	const modal = document.getElementById('myModal');
-const open = document.getElementById('modelWindow');
-const close = document.getElementById('closeModal')
+const bar = document.getElementById('bar');
+		const nav = document.getElementById('navbar');
+		const close = document.getElementById('close')
 
-open.addEventListener("click", (event) => {
-    event.preventDefault();
-    modal.style.display = "flex";
-});
-
-close.addEventListener("click", (event) => {
-    modal.style.display = "none";
-});
-
+		bar.addEventListener("click", () => {
+			nav.classList.toggle('active');
+		});
+		close.addEventListener("click", () => {
+			nav.classList.remove('active');
+		})
 </script>
 </html>
